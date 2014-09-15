@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		24416B8111C4CA220047AFDD /* Build & Test */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */;
+			buildPhases = (
+				24416B8011C4CA220047AFDD /* ShellScript */,
+			);
+			dependencies = (
+				24416B8511C4CA280047AFDD /* PBXTargetDependency */,
+			);
+			name = "Build & Test";
+			productName = "Build & test";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1316DBE619C637A70052BB64 /* AltBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBB819C637A70052BB64 /* AltBeacon.h */; };
+		1316DBE719C637A70052BB64 /* AltBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBB919C637A70052BB64 /* AltBeacon.m */; };
+		1316DBE819C637A70052BB64 /* CBCentralManager+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBBB19C637A70052BB64 /* CBCentralManager+Ext.h */; };
+		1316DBE919C637A70052BB64 /* CBCentralManager+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBBC19C637A70052BB64 /* CBCentralManager+Ext.m */; };
+		1316DBEA19C637A70052BB64 /* CBPeripheralManager+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBBD19C637A70052BB64 /* CBPeripheralManager+Ext.h */; };
+		1316DBEB19C637A70052BB64 /* CBPeripheralManager+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBBE19C637A70052BB64 /* CBPeripheralManager+Ext.m */; };
+		1316DBEC19C637A70052BB64 /* CBUUID+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBBF19C637A70052BB64 /* CBUUID+Ext.h */; };
+		1316DBED19C637A70052BB64 /* CBUUID+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBC019C637A70052BB64 /* CBUUID+Ext.m */; };
+		1316DBEE19C637A70052BB64 /* CLBeacon+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBC119C637A70052BB64 /* CLBeacon+Ext.h */; };
+		1316DBEF19C637A70052BB64 /* CLBeacon+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBC219C637A70052BB64 /* CLBeacon+Ext.m */; };
+		1316DBF019C637A70052BB64 /* CustomExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBC319C637A70052BB64 /* CustomExtensions.h */; };
+		1316DBF119C637A70052BB64 /* NSArray+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBC419C637A70052BB64 /* NSArray+Ext.h */; };
+		1316DBF219C637A70052BB64 /* NSArray+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBC519C637A70052BB64 /* NSArray+Ext.m */; };
+		1316DBF319C637A70052BB64 /* NSDate+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBC619C637A70052BB64 /* NSDate+Ext.h */; };
+		1316DBF419C637A70052BB64 /* NSDate+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBC719C637A70052BB64 /* NSDate+Ext.m */; };
+		1316DBF519C637A70052BB64 /* NSDictionary+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBC819C637A70052BB64 /* NSDictionary+Ext.h */; };
+		1316DBF619C637A70052BB64 /* NSDictionary+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBC919C637A70052BB64 /* NSDictionary+Ext.m */; };
+		1316DBF719C637A70052BB64 /* NSFileManager+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBCA19C637A70052BB64 /* NSFileManager+Ext.h */; };
+		1316DBF819C637A70052BB64 /* NSFileManager+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBCB19C637A70052BB64 /* NSFileManager+Ext.m */; };
+		1316DBF919C637A70052BB64 /* NSMutableArray+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBCC19C637A70052BB64 /* NSMutableArray+Ext.h */; };
+		1316DBFA19C637A70052BB64 /* NSMutableArray+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBCD19C637A70052BB64 /* NSMutableArray+Ext.m */; };
+		1316DBFB19C637A70052BB64 /* NSMutableDictionary+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBCE19C637A70052BB64 /* NSMutableDictionary+Ext.h */; };
+		1316DBFC19C637A70052BB64 /* NSMutableDictionary+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBCF19C637A70052BB64 /* NSMutableDictionary+Ext.m */; };
+		1316DBFD19C637A70052BB64 /* NSMutableSet+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBD019C637A70052BB64 /* NSMutableSet+Ext.h */; };
+		1316DBFE19C637A70052BB64 /* NSMutableSet+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBD119C637A70052BB64 /* NSMutableSet+Ext.m */; };
+		1316DBFF19C637A70052BB64 /* NSObject+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBD219C637A70052BB64 /* NSObject+Ext.h */; };
+		1316DC0019C637A70052BB64 /* NSObject+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBD319C637A70052BB64 /* NSObject+Ext.m */; };
+		1316DC0119C637A70052BB64 /* NSRangeExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBD419C637A70052BB64 /* NSRangeExt.h */; };
+		1316DC0219C637A70052BB64 /* NSRangeExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBD519C637A70052BB64 /* NSRangeExt.m */; };
+		1316DC0319C637A70052BB64 /* NSSet+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBD619C637A70052BB64 /* NSSet+Ext.h */; };
+		1316DC0419C637A70052BB64 /* NSSet+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBD719C637A70052BB64 /* NSSet+Ext.m */; };
+		1316DC0519C637A70052BB64 /* NSString+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBD819C637A70052BB64 /* NSString+Ext.h */; };
+		1316DC0619C637A70052BB64 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBD919C637A70052BB64 /* NSString+Ext.m */; };
+		1316DC0719C637A70052BB64 /* EasedValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBDB19C637A70052BB64 /* EasedValue.h */; };
+		1316DC0819C637A70052BB64 /* EasedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBDC19C637A70052BB64 /* EasedValue.m */; };
+		1316DC0919C637A70052BB64 /* GCDSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBDD19C637A70052BB64 /* GCDSingleton.h */; };
+		1316DC0A19C637A70052BB64 /* GCDUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBDE19C637A70052BB64 /* GCDUtilities.h */; };
+		1316DC0B19C637A70052BB64 /* GCDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBDF19C637A70052BB64 /* GCDUtilities.m */; };
+		1316DC0C19C637A70052BB64 /* INWeightedAverage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1316DBE019C637A70052BB64 /* INWeightedAverage.h */; };
+		1316DC0D19C637A70052BB64 /* INWeightedAverage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1316DBE119C637A70052BB64 /* INWeightedAverage.m */; };
+		1316DC1119C6B4EF0052BB64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1316DC1019C6B4EF0052BB64 /* UIKit.framework */; };
+		13C178A819C77FD100BF6623 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C178A719C77FD100BF6623 /* CoreBluetooth.framework */; };
+		24DD6CF91134B3F500162E58 /* CoAltitudeAltbeaconModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* CoAltitudeAltbeaconModule.h */; };
+		24DD6CFA1134B3F500162E58 /* CoAltitudeAltbeaconModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* CoAltitudeAltbeaconModule.m */; };
+		24DE9E1111C5FE74003F90F6 /* CoAltitudeAltbeaconModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* CoAltitudeAltbeaconModuleAssets.h */; };
+		24DE9E1211C5FE74003F90F6 /* CoAltitudeAltbeaconModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* CoAltitudeAltbeaconModuleAssets.m */; };
+		AA747D9F0F9514B9006C5449 /* CoAltitudeAltbeacon_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* CoAltitudeAltbeacon_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24416B8411C4CA280047AFDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = altbeacon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1316DBB819C637A70052BB64 /* AltBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AltBeacon.h; sourceTree = "<group>"; };
+		1316DBB919C637A70052BB64 /* AltBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AltBeacon.m; sourceTree = "<group>"; };
+		1316DBBB19C637A70052BB64 /* CBCentralManager+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBCentralManager+Ext.h"; sourceTree = "<group>"; };
+		1316DBBC19C637A70052BB64 /* CBCentralManager+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBCentralManager+Ext.m"; sourceTree = "<group>"; };
+		1316DBBD19C637A70052BB64 /* CBPeripheralManager+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBPeripheralManager+Ext.h"; sourceTree = "<group>"; };
+		1316DBBE19C637A70052BB64 /* CBPeripheralManager+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBPeripheralManager+Ext.m"; sourceTree = "<group>"; };
+		1316DBBF19C637A70052BB64 /* CBUUID+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+Ext.h"; sourceTree = "<group>"; };
+		1316DBC019C637A70052BB64 /* CBUUID+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+Ext.m"; sourceTree = "<group>"; };
+		1316DBC119C637A70052BB64 /* CLBeacon+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeacon+Ext.h"; sourceTree = "<group>"; };
+		1316DBC219C637A70052BB64 /* CLBeacon+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeacon+Ext.m"; sourceTree = "<group>"; };
+		1316DBC319C637A70052BB64 /* CustomExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomExtensions.h; sourceTree = "<group>"; };
+		1316DBC419C637A70052BB64 /* NSArray+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Ext.h"; sourceTree = "<group>"; };
+		1316DBC519C637A70052BB64 /* NSArray+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Ext.m"; sourceTree = "<group>"; };
+		1316DBC619C637A70052BB64 /* NSDate+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Ext.h"; sourceTree = "<group>"; };
+		1316DBC719C637A70052BB64 /* NSDate+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Ext.m"; sourceTree = "<group>"; };
+		1316DBC819C637A70052BB64 /* NSDictionary+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Ext.h"; sourceTree = "<group>"; };
+		1316DBC919C637A70052BB64 /* NSDictionary+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Ext.m"; sourceTree = "<group>"; };
+		1316DBCA19C637A70052BB64 /* NSFileManager+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Ext.h"; sourceTree = "<group>"; };
+		1316DBCB19C637A70052BB64 /* NSFileManager+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Ext.m"; sourceTree = "<group>"; };
+		1316DBCC19C637A70052BB64 /* NSMutableArray+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Ext.h"; sourceTree = "<group>"; };
+		1316DBCD19C637A70052BB64 /* NSMutableArray+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Ext.m"; sourceTree = "<group>"; };
+		1316DBCE19C637A70052BB64 /* NSMutableDictionary+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Ext.h"; sourceTree = "<group>"; };
+		1316DBCF19C637A70052BB64 /* NSMutableDictionary+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Ext.m"; sourceTree = "<group>"; };
+		1316DBD019C637A70052BB64 /* NSMutableSet+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+Ext.h"; sourceTree = "<group>"; };
+		1316DBD119C637A70052BB64 /* NSMutableSet+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+Ext.m"; sourceTree = "<group>"; };
+		1316DBD219C637A70052BB64 /* NSObject+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Ext.h"; sourceTree = "<group>"; };
+		1316DBD319C637A70052BB64 /* NSObject+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Ext.m"; sourceTree = "<group>"; };
+		1316DBD419C637A70052BB64 /* NSRangeExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRangeExt.h; sourceTree = "<group>"; };
+		1316DBD519C637A70052BB64 /* NSRangeExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRangeExt.m; sourceTree = "<group>"; };
+		1316DBD619C637A70052BB64 /* NSSet+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+Ext.h"; sourceTree = "<group>"; };
+		1316DBD719C637A70052BB64 /* NSSet+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+Ext.m"; sourceTree = "<group>"; };
+		1316DBD819C637A70052BB64 /* NSString+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
+		1316DBD919C637A70052BB64 /* NSString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
+		1316DBDB19C637A70052BB64 /* EasedValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasedValue.h; sourceTree = "<group>"; };
+		1316DBDC19C637A70052BB64 /* EasedValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasedValue.m; sourceTree = "<group>"; };
+		1316DBDD19C637A70052BB64 /* GCDSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDSingleton.h; sourceTree = "<group>"; };
+		1316DBDE19C637A70052BB64 /* GCDUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDUtilities.h; sourceTree = "<group>"; };
+		1316DBDF19C637A70052BB64 /* GCDUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDUtilities.m; sourceTree = "<group>"; };
+		1316DBE019C637A70052BB64 /* INWeightedAverage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INWeightedAverage.h; sourceTree = "<group>"; };
+		1316DBE119C637A70052BB64 /* INWeightedAverage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INWeightedAverage.m; sourceTree = "<group>"; };
+		1316DC1019C6B4EF0052BB64 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		13C178A719C77FD100BF6623 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		24DD6CF71134B3F500162E58 /* CoAltitudeAltbeaconModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoAltitudeAltbeaconModule.h; path = Classes/CoAltitudeAltbeaconModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* CoAltitudeAltbeaconModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoAltitudeAltbeaconModule.m; path = Classes/CoAltitudeAltbeaconModule.m; sourceTree = "<group>"; };
+		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
+		24DE9E0F11C5FE74003F90F6 /* CoAltitudeAltbeaconModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoAltitudeAltbeaconModuleAssets.h; path = Classes/CoAltitudeAltbeaconModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* CoAltitudeAltbeaconModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoAltitudeAltbeaconModuleAssets.m; path = Classes/CoAltitudeAltbeaconModuleAssets.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* CoAltitudeAltbeacon_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoAltitudeAltbeacon_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libCoAltitudeAltbeacon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoAltitudeAltbeacon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13C178A819C77FD100BF6623 /* CoreBluetooth.framework in Frameworks */,
+				1316DC1119C6B4EF0052BB64 /* UIKit.framework in Frameworks */,
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libCoAltitudeAltbeacon.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* altbeacon */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				1316DBB419C637A70052BB64 /* Source */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = altbeacon;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13C178A719C77FD100BF6623 /* CoreBluetooth.framework */,
+				1316DC1019C6B4EF0052BB64 /* UIKit.framework */,
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				24DE9E0F11C5FE74003F90F6 /* CoAltitudeAltbeaconModuleAssets.h */,
+				24DE9E1011C5FE74003F90F6 /* CoAltitudeAltbeaconModuleAssets.m */,
+				24DD6CF71134B3F500162E58 /* CoAltitudeAltbeaconModule.h */,
+				24DD6CF81134B3F500162E58 /* CoAltitudeAltbeaconModule.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1316DBB419C637A70052BB64 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1316DBB819C637A70052BB64 /* AltBeacon.h */,
+				1316DBB919C637A70052BB64 /* AltBeacon.m */,
+				1316DBBA19C637A70052BB64 /* Extension */,
+				1316DBDA19C637A70052BB64 /* Util */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1316DBBA19C637A70052BB64 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1316DBBB19C637A70052BB64 /* CBCentralManager+Ext.h */,
+				1316DBBC19C637A70052BB64 /* CBCentralManager+Ext.m */,
+				1316DBBD19C637A70052BB64 /* CBPeripheralManager+Ext.h */,
+				1316DBBE19C637A70052BB64 /* CBPeripheralManager+Ext.m */,
+				1316DBBF19C637A70052BB64 /* CBUUID+Ext.h */,
+				1316DBC019C637A70052BB64 /* CBUUID+Ext.m */,
+				1316DBC119C637A70052BB64 /* CLBeacon+Ext.h */,
+				1316DBC219C637A70052BB64 /* CLBeacon+Ext.m */,
+				1316DBC319C637A70052BB64 /* CustomExtensions.h */,
+				1316DBC419C637A70052BB64 /* NSArray+Ext.h */,
+				1316DBC519C637A70052BB64 /* NSArray+Ext.m */,
+				1316DBC619C637A70052BB64 /* NSDate+Ext.h */,
+				1316DBC719C637A70052BB64 /* NSDate+Ext.m */,
+				1316DBC819C637A70052BB64 /* NSDictionary+Ext.h */,
+				1316DBC919C637A70052BB64 /* NSDictionary+Ext.m */,
+				1316DBCA19C637A70052BB64 /* NSFileManager+Ext.h */,
+				1316DBCB19C637A70052BB64 /* NSFileManager+Ext.m */,
+				1316DBCC19C637A70052BB64 /* NSMutableArray+Ext.h */,
+				1316DBCD19C637A70052BB64 /* NSMutableArray+Ext.m */,
+				1316DBCE19C637A70052BB64 /* NSMutableDictionary+Ext.h */,
+				1316DBCF19C637A70052BB64 /* NSMutableDictionary+Ext.m */,
+				1316DBD019C637A70052BB64 /* NSMutableSet+Ext.h */,
+				1316DBD119C637A70052BB64 /* NSMutableSet+Ext.m */,
+				1316DBD219C637A70052BB64 /* NSObject+Ext.h */,
+				1316DBD319C637A70052BB64 /* NSObject+Ext.m */,
+				1316DBD419C637A70052BB64 /* NSRangeExt.h */,
+				1316DBD519C637A70052BB64 /* NSRangeExt.m */,
+				1316DBD619C637A70052BB64 /* NSSet+Ext.h */,
+				1316DBD719C637A70052BB64 /* NSSet+Ext.m */,
+				1316DBD819C637A70052BB64 /* NSString+Ext.h */,
+				1316DBD919C637A70052BB64 /* NSString+Ext.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1316DBDA19C637A70052BB64 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				1316DBDB19C637A70052BB64 /* EasedValue.h */,
+				1316DBDC19C637A70052BB64 /* EasedValue.m */,
+				1316DBDD19C637A70052BB64 /* GCDSingleton.h */,
+				1316DBDE19C637A70052BB64 /* GCDUtilities.h */,
+				1316DBDF19C637A70052BB64 /* GCDUtilities.m */,
+				1316DBE019C637A70052BB64 /* INWeightedAverage.h */,
+				1316DBE119C637A70052BB64 /* INWeightedAverage.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* CoAltitudeAltbeacon_Prefix.pch */,
+				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* CoAltitudeAltbeacon_Prefix.pch in Headers */,
+				1316DBF319C637A70052BB64 /* NSDate+Ext.h in Headers */,
+				1316DBF919C637A70052BB64 /* NSMutableArray+Ext.h in Headers */,
+				1316DBE619C637A70052BB64 /* AltBeacon.h in Headers */,
+				1316DBF719C637A70052BB64 /* NSFileManager+Ext.h in Headers */,
+				1316DC0519C637A70052BB64 /* NSString+Ext.h in Headers */,
+				1316DBEC19C637A70052BB64 /* CBUUID+Ext.h in Headers */,
+				1316DC0719C637A70052BB64 /* EasedValue.h in Headers */,
+				1316DC0319C637A70052BB64 /* NSSet+Ext.h in Headers */,
+				1316DBEE19C637A70052BB64 /* CLBeacon+Ext.h in Headers */,
+				1316DC0919C637A70052BB64 /* GCDSingleton.h in Headers */,
+				1316DBF019C637A70052BB64 /* CustomExtensions.h in Headers */,
+				24DD6CF91134B3F500162E58 /* CoAltitudeAltbeaconModule.h in Headers */,
+				1316DC0A19C637A70052BB64 /* GCDUtilities.h in Headers */,
+				1316DBF519C637A70052BB64 /* NSDictionary+Ext.h in Headers */,
+				24DE9E1111C5FE74003F90F6 /* CoAltitudeAltbeaconModuleAssets.h in Headers */,
+				1316DC0C19C637A70052BB64 /* INWeightedAverage.h in Headers */,
+				1316DBFD19C637A70052BB64 /* NSMutableSet+Ext.h in Headers */,
+				1316DBFB19C637A70052BB64 /* NSMutableDictionary+Ext.h in Headers */,
+				1316DBF119C637A70052BB64 /* NSArray+Ext.h in Headers */,
+				1316DBE819C637A70052BB64 /* CBCentralManager+Ext.h in Headers */,
+				1316DC0119C637A70052BB64 /* NSRangeExt.h in Headers */,
+				1316DBFF19C637A70052BB64 /* NSObject+Ext.h in Headers */,
+				1316DBEA19C637A70052BB64 /* CBPeripheralManager+Ext.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* altbeacon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "altbeacon" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = altbeacon;
+			productName = altbeacon;
+			productReference = D2AAC07E0554694100DB518D /* libCoAltitudeAltbeacon.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "altbeacon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* altbeacon */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* altbeacon */,
+				24416B8111C4CA220047AFDD /* Build & Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24416B8011C4CA220047AFDD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\n\npython \"${TITANIUM_SDK}/titanium.py\" run --dir=\"${PROJECT_DIR}\"\nexit $?\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1316DC0B19C637A70052BB64 /* GCDUtilities.m in Sources */,
+				1316DBF419C637A70052BB64 /* NSDate+Ext.m in Sources */,
+				1316DBF219C637A70052BB64 /* NSArray+Ext.m in Sources */,
+				24DD6CFA1134B3F500162E58 /* CoAltitudeAltbeaconModule.m in Sources */,
+				1316DBE919C637A70052BB64 /* CBCentralManager+Ext.m in Sources */,
+				1316DBEB19C637A70052BB64 /* CBPeripheralManager+Ext.m in Sources */,
+				1316DBED19C637A70052BB64 /* CBUUID+Ext.m in Sources */,
+				1316DBF819C637A70052BB64 /* NSFileManager+Ext.m in Sources */,
+				1316DBFA19C637A70052BB64 /* NSMutableArray+Ext.m in Sources */,
+				1316DBEF19C637A70052BB64 /* CLBeacon+Ext.m in Sources */,
+				1316DC0819C637A70052BB64 /* EasedValue.m in Sources */,
+				24DE9E1211C5FE74003F90F6 /* CoAltitudeAltbeaconModuleAssets.m in Sources */,
+				1316DC0D19C637A70052BB64 /* INWeightedAverage.m in Sources */,
+				1316DC0419C637A70052BB64 /* NSSet+Ext.m in Sources */,
+				1316DBFC19C637A70052BB64 /* NSMutableDictionary+Ext.m in Sources */,
+				1316DC0619C637A70052BB64 /* NSString+Ext.m in Sources */,
+				1316DC0219C637A70052BB64 /* NSRangeExt.m in Sources */,
+				1316DBE719C637A70052BB64 /* AltBeacon.m in Sources */,
+				1316DC0019C637A70052BB64 /* NSObject+Ext.m in Sources */,
+				1316DBF619C637A70052BB64 /* NSDictionary+Ext.m in Sources */,
+				1316DBFE19C637A70052BB64 /* NSMutableSet+Ext.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24416B8511C4CA280047AFDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* altbeacon */;
+			targetProxy = 24416B8411C4CA280047AFDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DSTROOT = /tmp/CoAltitudeAltbeacon.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CoAltitudeAltbeacon_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DTI_POST_1_2",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = CoAltitudeAltbeacon;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/CoAltitudeAltbeacon.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CoAltitudeAltbeacon_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DTI_POST_1_2";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = CoAltitudeAltbeacon;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DSTROOT = /tmp/CoAltitudeAltbeacon.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CoAltitudeAltbeacon_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DTI_POST_1_2",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = CoAltitudeAltbeacon;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/CoAltitudeAltbeacon.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CoAltitudeAltbeacon_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = "-DTI_POST_1_2";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = CoAltitudeAltbeacon;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		24416B8211C4CA220047AFDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "Build & test";
+			};
+			name = Debug;
+		};
+		24416B8311C4CA220047AFDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "Build & test";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "altbeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "altbeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24416B8211C4CA220047AFDD /* Debug */,
+				24416B8311C4CA220047AFDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

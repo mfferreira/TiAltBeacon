@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+description: altbeacon
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2014 by Your Company
+
+# these should not be edited
+name: altbeacon
+moduleid: co.altitude.altbeacon
+guid: 3ddf47b1-a42b-41b1-b844-613e164f4b95
+platform: iphone
+minsdk: 3.4.0.v20140911135715
