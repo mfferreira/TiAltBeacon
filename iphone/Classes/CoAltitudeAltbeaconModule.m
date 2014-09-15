@@ -109,16 +109,24 @@
 -(void)configure:(id)args {
     ENSURE_SINGLE_ARG(args, NSDictionary);
 
-    _beaconOne.debugCentral = (BOOL*)[args objectForKey:@"debugCentral"];
-    _beaconOne.debugPeripheral = (BOOL*)[args objectForKey:@"debugPeripheral"];
-    _beaconOne.debugProximity = (BOOL*)[args objectForKey:@"debugProximity"];
+    if ([args respondsToSelector:NSSelectorFromString(@"debugCentral")])
+        _beaconOne.debugCentral = (BOOL*)[args objectForKey:@"debugCentral"];
+    if ([args respondsToSelector:NSSelectorFromString(@"debugPeripheral")])
+        _beaconOne.debugPeripheral = (BOOL*)[args objectForKey:@"debugPeripheral"];
+    if ([args respondsToSelector:NSSelectorFromString(@"debugProximity")])
+        _beaconOne.debugProximity = (BOOL*)[args objectForKey:@"debugProximity"];
     
-    _beaconOne.updateInterval = *((float*)[args objectForKey:@"updateInterval"]);
-    _beaconOne.processPeripheralInterval = *((float*)[args objectForKey:@"processPeripheralInterval"]);
-    _beaconOne.restartScanInterval = *((float*)[args objectForKey:@"restartScanInterval"]);
+    if ([args respondsToSelector:NSSelectorFromString(@"updateInterval")])
+        _beaconOne.updateInterval = *((float*)[args objectForKey:@"updateInterval"]);
+    if ([args respondsToSelector:NSSelectorFromString(@"processPeripheralInterval")])
+        _beaconOne.processPeripheralInterval = *((float*)[args objectForKey:@"processPeripheralInterval"]);
+    if ([args respondsToSelector:NSSelectorFromString(@"restartScanInterval")])
+        _beaconOne.restartScanInterval = *((float*)[args objectForKey:@"restartScanInterval"]);
     
-    _beaconOne.altBeaconService = (NSString*)[args objectForKey:@"service"] ;
-    _beaconOne.altBeaconCharacteristic = (NSString*)[args objectForKey:@"characteristic"] ;
+    if ([args respondsToSelector:NSSelectorFromString(@"service")])
+        _beaconOne.altBeaconService = (NSString*)[args objectForKey:@"service"] ;
+    if ([args respondsToSelector:NSSelectorFromString(@"characteristic")])
+        _beaconOne.altBeaconCharacteristic = (NSString*)[args objectForKey:@"characteristic"] ;
 }
 
 #pragma mark Start
