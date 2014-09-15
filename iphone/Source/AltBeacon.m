@@ -38,9 +38,9 @@
 #import "GCDSingleton.h"
 #import "EasedValue.h"
 
-#define DEBUG_CENTRAL YES
-#define DEBUG_PERIPHERAL YES
-#define DEBUG_PROXIMITY YES
+#define DEBUG_CENTRAL NO
+#define DEBUG_PERIPHERAL NO
+#define DEBUG_PROXIMITY NO
 
 #define UPDATE_INTERVAL 1.0f
 #define PROCESS_PERIPHERAL_INTERVAL 2.0f
@@ -72,6 +72,7 @@
     NSMutableDictionary *peripheralUUIDSMatching;
     NSMutableArray *peripheralsToBeValidated;
     CBMutableCharacteristic *characteristic;
+    
 }
 
 
@@ -91,6 +92,16 @@
         bluetoothIsEnabledAndAuthorized = [self hasBluetooth];
         [self startAuthorizationTimer];
     }
+    
+    _debugCentral = DEBUG_CENTRAL;
+    _debugPeripheral = DEBUG_PERIPHERAL;
+    _debugProximity = DEBUG_PROXIMITY;
+    _updateInterval = UPDATE_INTERVAL;
+    _processPeripheralInterval = PROCESS_PERIPHERAL_INTERVAL;
+    _restartScanInterval = RESTART_SCAN_INTERVAL;
+    _altBeaconService = ALT_BEACON_SERVICE;
+    _altBeaconCharacteristic = ALT_BEACON_CHARACTERISTIC;
+    
     return self;
 }
 

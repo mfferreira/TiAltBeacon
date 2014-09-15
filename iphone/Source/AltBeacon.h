@@ -55,6 +55,19 @@ typedef enum {
 @property (nonatomic, readonly) BOOL isDetecting;
 @property (nonatomic, readonly) BOOL isBroadcasting;
 
+// user set
+@property BOOL *debugCentral;
+@property BOOL *debugPeripheral;
+@property BOOL *debugProximity;
+
+@property float updateInterval;
+@property float processPeripheralInterval;
+@property float restartScanInterval;
+
+@property (nonatomic, strong) NSString* altBeaconService;
+@property (nonatomic, strong) NSString* altBeaconCharacteristic;
+
+
 - (void)startDetecting;
 - (void)stopDetecting;
 

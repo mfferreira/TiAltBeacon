@@ -94,7 +94,9 @@
 
 #pragma Public APIs
 
--(void)setId:(id)name {
+#pragma mark Init
+
+-(void)initialize:(id)name {
     ENSURE_SINGLE_ARG(name, NSString);
     _myID = name;
     
@@ -102,6 +104,21 @@
     _beaconOne =  [[AltBeacon alloc ]initWithIdentifier:_myID];
     
     [_beaconOne addDelegate:self];
+}
+
+-(void)configure:(id)args {
+    ENSURE_SINGLE_ARG(args, NSDictionary);
+
+    _beaconOne.debugCentral = (BOOL*)[args objectForKey:@"debugCentral"];
+    _beaconOne.debugPeripheral = (BOOL*)[args objectForKey:@"debugPeripheral"];
+    _beaconOne.debugProximity = (BOOL*)[args objectForKey:@"debugProximity"];
+    
+    _beaconOne.updateInterval = *((float*)[args objectForKey:@"updateInterval"]);
+    _beaconOne.processPeripheralInterval = *((float*)[args objectForKey:@"processPeripheralInterval"]);
+    _beaconOne.restartScanInterval = *((float*)[args objectForKey:@"restartScanInterval"]);
+    
+    _beaconOne.altBeaconService = (NSString*)[args objectForKey:@"service"] ;
+    _beaconOne.altBeaconCharacteristic = (NSString*)[args objectForKey:@"characteristic"] ;
 }
 
 #pragma mark Start
