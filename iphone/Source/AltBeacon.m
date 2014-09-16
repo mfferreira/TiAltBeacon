@@ -142,14 +142,14 @@
 
 - (void)startScanning {
 
-    reportTimer = [NSTimer scheduledTimerWithTimeInterval:UPDATE_INTERVAL target:self
+    reportTimer = [NSTimer scheduledTimerWithTimeInterval:_updateInterval target:self
                                                  selector:@selector(reportRangesToDelegates:) userInfo:nil repeats:YES];
 
-    processPeripherals = [NSTimer scheduledTimerWithTimeInterval:PROCESS_PERIPHERAL_INTERVAL target:self
+    processPeripherals = [NSTimer scheduledTimerWithTimeInterval:_processPeripheralInterval target:self
                                                         selector:@selector(processPeripherals:) userInfo:nil repeats:NO];
     NSDictionary *scanOptions = @{CBCentralManagerScanOptionAllowDuplicatesKey : @(YES)};
 
-    [centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:ALT_BEACON_SERVICE]] options:scanOptions];
+    [centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:_altBeaconService]] options:scanOptions];
     //[centralManager scanForPeripheralsWithServices:nil options:scanOptions];
     _isDetecting = YES;
 }
@@ -212,7 +212,7 @@ didDiscoverCharacteristicsForService:(CBService *)service
                                error:(NSError *)error {
 
     if (!error) {
-        if (DEBUG_PERIPHERAL)
+        if (_debugPeripheral)
             NSLog(@"did discover characteristics: %@", [peripheral.identifier UUIDString]);
         [peripheral readValueForCharacteristic:service.characteristics[0]];
     } else {
@@ -222,11 +222,11 @@ didDiscoverCharacteristicsForService:(CBService *)service
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
     if (!error) {
-        if (DEBUG_PERIPHERAL)
+        if (_debugPeripheral)
             NSLog(@"did discover services: %@", [peripheral.identifier UUIDString]);
         NSArray *services = peripheral.services;
         if (services.count > 0) {
-            CBUUID *uuidCharacteristic = [CBUUID UUIDWithString:ALT_BEACON_CHARACTERISTIC];
+            CBUUID *uuidCharacteristic = [CBUUID UUIDWithString:_altBeaconCharacteristic];
             [peripheral discoverCharacteristics:@[uuidCharacteristic] forService:services[0]];
         }
     } else {
@@ -235,9 +235,9 @@ didDiscoverCharacteristicsForService:(CBService *)service
 }
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
-    if (DEBUG_CENTRAL)
+    if (_debugCentral)
         NSLog(@"did connect peripheral: %@", [peripheral.identifier UUIDString]);
-    CBUUID *uuidService = [CBUUID UUIDWithString:ALT_BEACON_SERVICE];
+    CBUUID *uuidService = [CBUUID UUIDWithString:_altBeaconService];
     peripheral.delegate = self;
     [peripheral discoverServices:@[uuidService]];
 
@@ -258,10 +258,10 @@ didDiscoverCharacteristicsForService:(CBService *)service
                 [centralManager connectPeripheral:peripheral options:nil];
             }
         }
-        restartScan = [NSTimer scheduledTimerWithTimeInterval:RESTART_SCAN_INTERVAL target:self
+        restartScan = [NSTimer scheduledTimerWithTimeInterval:_restartScanInterval target:self
                                                      selector:@selector(restartScan:) userInfo:nil repeats:NO];
     } else {
-        processPeripherals = [NSTimer scheduledTimerWithTimeInterval:PROCESS_PERIPHERAL_INTERVAL target:self
+        processPeripherals = [NSTimer scheduledTimerWithTimeInterval:_processPeripheralInterval target:self
                                                             selector:@selector(processPeripherals:) userInfo:nil repeats:NO];
     }
 
@@ -277,10 +277,10 @@ didDiscoverCharacteristicsForService:(CBService *)service
     }
     NSDictionary *scanOptions = @{CBCentralManagerScanOptionAllowDuplicatesKey : @(YES)};
 
-    [centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:ALT_BEACON_SERVICE]] options:scanOptions];
-    reportTimer = [NSTimer scheduledTimerWithTimeInterval:UPDATE_INTERVAL target:self
+    [centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:_altBeaconService]] options:scanOptions];
+    reportTimer = [NSTimer scheduledTimerWithTimeInterval:_updateInterval target:self
                                                  selector:@selector(reportRangesToDelegates:) userInfo:nil repeats:YES];
-    processPeripherals = [NSTimer scheduledTimerWithTimeInterval:PROCESS_PERIPHERAL_INTERVAL target:self
+    processPeripherals = [NSTimer scheduledTimerWithTimeInterval:_processPeripheralInterval target:self
                                                         selector:@selector(processPeripherals:) userInfo:nil repeats:NO];
 }
 
@@ -317,13 +317,13 @@ didDiscoverCharacteristicsForService:(CBService *)service
 
 - (void)startAdvertising {
     NSDictionary *advertisingData = @{CBAdvertisementDataLocalNameKey : @"AltBeacon",
-            CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:ALT_BEACON_SERVICE]]};
+            CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:_altBeaconService]]};
 
     // Start advertising over BLE
     CBUUID *altBeaconServiceUUID =
-            [CBUUID UUIDWithString:ALT_BEACON_SERVICE];
+            [CBUUID UUIDWithString:_altBeaconService];
     CBUUID *altBeaconCharacteristicUUID =
-            [CBUUID UUIDWithString:ALT_BEACON_CHARACTERISTIC];
+            [CBUUID UUIDWithString:_altBeaconCharacteristic];
 
     CBMutableService *service = [[CBMutableService alloc] initWithType:altBeaconServiceUUID primary:YES];
     NSString *strUUID = identifier;
@@ -366,7 +366,7 @@ didDiscoverCharacteristicsForService:(CBService *)service
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral
      advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI {
-    if (DEBUG_CENTRAL)
+    if (_debugCentral)
         NSLog(@"did discover peripheral: %@, data: %@, %1.2f", [peripheral.identifier UUIDString], advertisementData, [RSSI floatValue]);
 
 
@@ -391,7 +391,7 @@ didDiscoverCharacteristicsForService:(CBService *)service
 }
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
-    if (DEBUG_CENTRAL)
+    if (_debugCentral)
         NSLog(@"-- central state changed: %@", centralManager.stateString);
 
     if (central.state == CBCentralManagerStatePoweredOn) {
@@ -480,7 +480,7 @@ didDiscoverCharacteristicsForService:(CBService *)service
 #pragma mark - CBPeripheralManagerDelegate
 
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
-    if (DEBUG_PERIPHERAL)
+    if (_debugPeripheral)
         NSLog(@"-- peripheral state changed: %@", peripheral.stateString);
 
     if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
@@ -489,7 +489,7 @@ didDiscoverCharacteristicsForService:(CBService *)service
 }
 
 - (void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheral error:(NSError *)error {
-    if (DEBUG_PERIPHERAL) {
+    if (_debugPeripheral) {
         if (error)
             NSLog(@"error starting advertising: %@", [error localizedDescription]);
         else

@@ -109,23 +109,25 @@
 -(void)configure:(id)args {
     ENSURE_SINGLE_ARG(args, NSDictionary);
 
-    if ([args respondsToSelector:NSSelectorFromString(@"debugCentral")])
+    NSLog(@"[INFO] configure %@",args);
+
+    if ([args objectForKey:@"debugCentral"])
         _beaconOne.debugCentral = [TiUtils boolValue:[args objectForKey:@"debugCentral"]];
-    if ([args respondsToSelector:NSSelectorFromString(@"debugPeripheral")])
+    if ([args objectForKey:@"debugPeripheral"])
         _beaconOne.debugPeripheral = [TiUtils boolValue:[args objectForKey:@"debugPeripheral"]];
-    if ([args respondsToSelector:NSSelectorFromString(@"debugProximity")])
+    if ([args objectForKey:@"debugProximity"])
         _beaconOne.debugProximity = [TiUtils boolValue:[args objectForKey:@"debugProximity"]];
     
-    if ([args respondsToSelector:NSSelectorFromString(@"updateInterval")])
+    if ([args objectForKey:@"updateInterval"])
         _beaconOne.updateInterval = [TiUtils floatValue:[args objectForKey:@"updateInterval"]];
-    if ([args respondsToSelector:NSSelectorFromString(@"processPeripheralInterval")])
+    if ([args objectForKey:@"processPeripheralInterval"])
         _beaconOne.processPeripheralInterval = [TiUtils floatValue:[args objectForKey:@"processPeripheralInterval"]];
-    if ([args respondsToSelector:NSSelectorFromString(@"restartScanInterval")])
+    if ([args objectForKey:@"restartScanInterval"])
         _beaconOne.restartScanInterval = [TiUtils floatValue:[args objectForKey:@"restartScanInterval"]];
     
-    if ([args respondsToSelector:NSSelectorFromString(@"service")])
+    if ([args objectForKey:@"service"])
         _beaconOne.altBeaconService = (NSString*)[args objectForKey:@"service"] ;
-    if ([args respondsToSelector:NSSelectorFromString(@"characteristic")])
+    if ([args objectForKey:@"characteristic"])
         _beaconOne.altBeaconCharacteristic = (NSString*)[args objectForKey:@"characteristic"] ;
 }
 
