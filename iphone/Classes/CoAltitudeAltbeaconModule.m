@@ -98,10 +98,10 @@
 
 -(void)initialize:(id)name {
     ENSURE_SINGLE_ARG(name, NSString);
-    _myID = name;
+    _myID = [[NSString alloc] initWithString: name];;
     
     // Initialize the IBeacon UUDI@
-    _beaconOne =  [[AltBeacon alloc ]initWithIdentifier:_myID];
+    _beaconOne =  [[AltBeacon alloc ] initWithIdentifier:_myID];
     
     [_beaconOne addDelegate:self];
 }
@@ -110,18 +110,18 @@
     ENSURE_SINGLE_ARG(args, NSDictionary);
 
     if ([args respondsToSelector:NSSelectorFromString(@"debugCentral")])
-        _beaconOne.debugCentral = (BOOL*)[args objectForKey:@"debugCentral"];
+        _beaconOne.debugCentral = [TiUtils boolValue:[args objectForKey:@"debugCentral"]];
     if ([args respondsToSelector:NSSelectorFromString(@"debugPeripheral")])
-        _beaconOne.debugPeripheral = (BOOL*)[args objectForKey:@"debugPeripheral"];
+        _beaconOne.debugPeripheral = [TiUtils boolValue:[args objectForKey:@"debugPeripheral"]];
     if ([args respondsToSelector:NSSelectorFromString(@"debugProximity")])
-        _beaconOne.debugProximity = (BOOL*)[args objectForKey:@"debugProximity"];
+        _beaconOne.debugProximity = [TiUtils boolValue:[args objectForKey:@"debugProximity"]];
     
     if ([args respondsToSelector:NSSelectorFromString(@"updateInterval")])
-        _beaconOne.updateInterval = *((float*)[args objectForKey:@"updateInterval"]);
+        _beaconOne.updateInterval = [TiUtils floatValue:[args objectForKey:@"updateInterval"]];
     if ([args respondsToSelector:NSSelectorFromString(@"processPeripheralInterval")])
-        _beaconOne.processPeripheralInterval = *((float*)[args objectForKey:@"processPeripheralInterval"]);
+        _beaconOne.processPeripheralInterval = [TiUtils floatValue:[args objectForKey:@"processPeripheralInterval"]];
     if ([args respondsToSelector:NSSelectorFromString(@"restartScanInterval")])
-        _beaconOne.restartScanInterval = *((float*)[args objectForKey:@"restartScanInterval"]);
+        _beaconOne.restartScanInterval = [TiUtils floatValue:[args objectForKey:@"restartScanInterval"]];
     
     if ([args respondsToSelector:NSSelectorFromString(@"service")])
         _beaconOne.altBeaconService = (NSString*)[args objectForKey:@"service"] ;
