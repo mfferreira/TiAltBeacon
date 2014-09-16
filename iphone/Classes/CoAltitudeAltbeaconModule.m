@@ -195,9 +195,9 @@
     
     // devices = {<device_id>: <range>}
 
-    
-    NSLog(@"foundDevices %@", devices);
-
+    if (_beaconOne.debugProximity) {
+        NSLog(@"foundDevices %@", devices);
+    }
     
     // send found devices to Titanium land
     NSMutableDictionary* event = [TiUtils dictionaryWithCode:0 message:nil];
