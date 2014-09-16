@@ -7,13 +7,8 @@
 
 #import "TiModule.h"
 #import "AltBeacon.h"
-//#import "TiProxy.h"
-//#import <UIKit/UIKit.h>
 
 @interface CoAltitudeAltbeaconModule : TiModule <AltBeaconDelegate>
-//@interface CoAltitudeAltbeaconModule : TiModule
-//{
-//}
 
 // variables
 @property (assign, nonatomic) BOOL didStartAltBOne;
