@@ -208,42 +208,33 @@
     
     // iterate over all found devices
     for(NSString *device in devices) {
-        
+    
         NSNumber * range = [devices objectForKey:device];
-        NSString *result = [self convertToString:range];
 
-        NSLog(@"%@ %@ %@ %@", device, @"was found", result, @"meters away");
+        if (range.intValue == INDetectorRangeUnknown) {
+            
+            NSLog(@"%@ %@", device, @"was lost");
 
-//        if (range.intValue == INDetectorRangeUnknown) {
-//            if ([device  isEqualToString:kUuidBeaconOne]){
-//                self.labelDisplayResultBeacon1.text = @"";
-//            }
-//            else if ([device  isEqualToString: kUuidBeaconTwo]){
-//                self.labelDisplayResultBeacon2.text =  @"";
-//            }
-//            else if ([device  isEqualToString: kUuidBeaconThree]){
-//                self.labelDisplayResultBeacon3.text = @"";
-//            }
-//        }
-//        
-//        else {
-//            
-//            NSString *result = [self convertToString:range];
-//            NSString *beaconName = @"";
-//            if ([device  isEqualToString:kUuidBeaconOne]){
-//                beaconName = @"Beacon one!";
-//                
-//                self.labelDisplayResultBeacon1.text = [NSString stringWithFormat:@"%@ %@ %@ %@", beaconName, @"was found",result, @"meters away"];
-//            }
-//            else if ([device  isEqualToString: kUuidBeaconTwo]){
-//                beaconName = @"Beacon two!";
-//                self.labelDisplayResultBeacon2.text = [NSString stringWithFormat:@"%@ %@ %@ %@", beaconName, @"was found",result, @"meters away"];
-//            }
-//            else if ([device  isEqualToString: kUuidBeaconThree]){
-//                beaconName = @"Beacon three!";
-//                self.labelDisplayResultBeacon3.text = [NSString stringWithFormat:@"%@ %@ %@ %@", beaconName, @"was found",result, @"meters away"];
-//            }
-//        }
+            // send lost device to Titanium land
+            NSMutableDictionary* event = [TiUtils dictionaryWithCode:0 message:nil];
+            [event setObject:device forKey:@"device"];
+            [self fireEvent:@"lostDevice" withObject:event];
+            
+        }
+        
+        else {
+            
+            NSString *result = [self convertToString:range];
+
+            NSLog(@"%@ %@ %@ %@", device, @"was found", result, @"meters away");
+
+            // send found device to Titanium land
+            NSMutableDictionary* event = [TiUtils dictionaryWithCode:0 message:nil];
+            [event setObject:device forKey:@"device"];
+            [event setObject:range forKey:@"range"];
+            [self fireEvent:@"foundDevice" withObject:event];
+
+        }
     }
 }
 
