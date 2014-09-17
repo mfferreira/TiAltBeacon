@@ -104,15 +104,39 @@ Shortcut that will call stopBroadcasting() and stopDetecting().
 
 ## Events
 
-### foundDevices
+### `foundDevices`
 
-Will be fired for every scan if any devices are found.
+A list with all devices found. Will be fired for every scan if any devices are found.
 
-Returns a list of all devices that were found:
+#### Returns
 
-    devices = [
-        {<device_uuid>: <range>}
-    ]
+    {
+        devices: [{<device_uuid>: <range>}]
+    }
+
+
+### `foundDevice`
+
+Will be fired every time a device is in range
+
+#### Returns
+
+    {
+        device: <uuid>,
+        range: [0-3]
+    }
+
+
+### `lostDevice`
+
+Will be fired every time a device is in range
+
+#### Returns
+
+    {
+        device: <uuid>
+    }
+
 
 # <a name="license">License</a>
 ---
