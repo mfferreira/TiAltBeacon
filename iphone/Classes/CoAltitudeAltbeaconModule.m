@@ -109,8 +109,6 @@
 -(void)configure:(id)args {
     ENSURE_SINGLE_ARG(args, NSDictionary);
 
-    NSLog(@"[INFO] configure %@",args);
-
     if ([args objectForKey:@"debugCentral"])
         _beaconOne.debugCentral = [TiUtils boolValue:[args objectForKey:@"debugCentral"]];
     if ([args objectForKey:@"debugPeripheral"])
@@ -129,6 +127,10 @@
         _beaconOne.altBeaconService = (NSString*)[args objectForKey:@"service"] ;
     if ([args objectForKey:@"characteristic"])
         _beaconOne.altBeaconCharacteristic = (NSString*)[args objectForKey:@"characteristic"] ;
+
+    if (_beaconOne.debugCentral)
+        NSLog(@"[INFO] configure %@",args);
+
 }
 
 #pragma mark Start
