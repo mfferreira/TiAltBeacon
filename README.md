@@ -20,12 +20,24 @@ This module code is based [CharruaLab/AltBeacon](https://github.com/CharruaLab/A
 ---
 
 	var altbeacon = require('co.altitude.altbeacon');
+	
 	altbeacon.initialize("079106D1-D6CC-442A-8D1D-E7A89599786B");
 	altbeacon.configure({
 		debugCentral: true,
 		debugPeripheral: true,
 		debugProximity: true
 	});
+		
+	altbeacon.addEventListener('foundDevice', function(e){
+	    Ti.API.debug("Device '+"e,device"+' is in range: "+ e.range);
+	});
+
+	altbeacon.addEventListener('lostDevice', function(e){
+	    Ti.API.debug("Device '+"e,device"+' is out of range");
+	});
+
+	altbeacon.startBroadcasting();
+	altbeacon.startDetecting();
 
 
 # <a name="reference">Reference</a>
