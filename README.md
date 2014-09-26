@@ -29,11 +29,11 @@ This module code is based [CharruaLab/AltBeacon](https://github.com/CharruaLab/A
 	});
 		
 	altbeacon.addEventListener('foundDevice', function(e){
-	    Ti.API.debug("Device '+"e,device"+' is in range: "+ e.range);
+	    Ti.API.debug("Device '+"e.device"+' is in range: "+ e.range);
 	});
 
 	altbeacon.addEventListener('lostDevice', function(e){
-	    Ti.API.debug("Device '+"e,device"+' is out of range");
+	    Ti.API.debug("Device '+"e.device"+' is out of range");
 	});
 
 	altbeacon.startBroadcasting();
